@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results</title>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <p>Predictions have been made and saved to <a href="{{ url_for('download_file', filename=filename) }}">{{ filename }}</a>.</p>
+    <h2>Predicted Sales:</h2>
+    <ul>
+        {% for prediction in predictions %}
+        <li>{{ prediction }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('upload_file') }}">Upload another file</a>
+</body>
+</html>
