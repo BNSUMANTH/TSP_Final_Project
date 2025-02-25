@@ -75,4 +75,5 @@ def download_file(filename):
     return send_file(filename, as_attachment=True)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Use Gunicorn in production
+    app.run(debug=False)  # Set debug=False for production
